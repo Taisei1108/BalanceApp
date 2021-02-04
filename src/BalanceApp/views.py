@@ -5,7 +5,7 @@ from rest_framework import status, viewsets, filters
 
 from .models import BorrowEvent
 # Create your views here.
-"""
+
 class ListBalance(APIView):
     def get(self, request):
         try:
@@ -14,7 +14,7 @@ class ListBalance(APIView):
                 {
                     'id': b.id,
                     'event_name': b.event_name.name,
-                    'event_date': b.eventdate,
+                    'event_date': b.event_date,
                     'price': b.price,
                     'is_paid': b.is_paid,
                 }
@@ -23,4 +23,3 @@ class ListBalance(APIView):
             return Response(res_list)
         except:
             return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-"""
